@@ -1,11 +1,10 @@
 return {
   { "sainnhe/gruvbox-material" },
   { "AstroNvim/astrocommunity" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.color.twilight-nvim", enabled = true },
+  { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
     import = "astrocommunity.motion.mini-move",
@@ -27,4 +26,5 @@ return {
       },
     },
   },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
