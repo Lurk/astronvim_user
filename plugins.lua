@@ -4,8 +4,8 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.color.twilight-nvim" },
-  { import = "astrocommunity.editing-support.auto-save-nvim" },
   {
     import = "astrocommunity.motion.mini-move",
   },
