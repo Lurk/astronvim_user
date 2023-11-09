@@ -5,7 +5,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.json" },
-  { import = "astrocommunity.color.twilight-nvim" },
   {
     import = "astrocommunity.motion.mini-move",
   },
@@ -27,4 +26,14 @@ return {
     },
   },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  {
+    "nvim-telescope/telescope.nvim",
+    optional = true,
+    opts = {
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+    },
+  },
 }

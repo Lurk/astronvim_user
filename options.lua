@@ -4,5 +4,6 @@ return {
     spell = true,
     spelloptions = "camel",
     spelllang = "en_us",
+    termguicolors = true,
   },
 }
