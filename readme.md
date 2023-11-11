@@ -13,3 +13,9 @@ git clone https://github.com/Lurk/astronvim_user.git user
 
 <S+Up>      - move up line/selection
 <S+Down>    - move down line/selection 
+
+## various custom mapping
+
+- `U` undo
+
+
