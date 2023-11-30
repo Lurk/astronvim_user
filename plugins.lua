@@ -9,6 +9,74 @@ return {
     import = "astrocommunity.motion.mini-move",
   },
   {
+    "indent-blankline.nvim",
+    opts = {
+      indent = { char = "·" },
+      scope = { show_start = false, show_end = false },
+      exclude = {
+        buftypes = {
+          "nofile",
+          "terminal",
+        },
+        filetypes = {
+          "help",
+          "startify",
+          "aerial",
+          "alpha",
+          "dashboard",
+          "lazy",
+          "neogitstatus",
+          "NvimTree",
+          "neo-tree",
+          "Trouble",
+        },
+      },
+    },
+  },
+  { "folke/neodev.nvim" },
+  {
+    "nvim-neotest/neotest",
+    ft = { "javascript", "typescript", "typescriptreact", "lua", "python", "go", "rust" },
+    dependencies = {
+      "rouge8/neotest-rust",
+      "haydenmeade/neotest-jest",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      {
+        "folke/neodev.nvim",
+        opts = function(_, opts)
+          opts.library = opts.library or {}
+          if opts.library.plugins ~= true then
+            opts.library.plugins = require("astronvim.utils").list_insert_unique(opts.library.plugins, "neotest")
+          end
+          opts.library.types = true
+        end,
+      },
+    },
+    opts = function()
+      return {
+        -- your neotest config here
+        adapters = {
+          require "neotest-rust",
+          require "neotest-jest",
+        },
+      }
+    end,
+    config = function(_, opts)
+      -- get neotest namespace (api call creates or returns namespace)
+      local neotest_ns = vim.api.nvim_create_namespace "neotest"
+      vim.diagnostic.config({
+        virtual_text = {
+          format = function(diagnostic)
+            local message = diagnostic.message:gsub("\n", " "):gsub("\t", " "):gsub("%s+", " "):gsub("^%s+", "")
+            return message
+          end,
+        },
+      }, neotest_ns)
+      require("neotest").setup(opts)
+    end,
+  },
+  {
     "echasnovski/mini.move",
     keys = {
       { "<S-Up>", mode = "n", desc = "Move line up" },
