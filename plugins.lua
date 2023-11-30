@@ -1,13 +1,12 @@
 return {
+  { "folke/neodev.nvim" },
   { "sainnhe/gruvbox-material" },
   { "AstroNvim/astrocommunity" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.json" },
-  {
-    import = "astrocommunity.motion.mini-move",
-  },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   {
     "indent-blankline.nvim",
     opts = {
@@ -33,7 +32,6 @@ return {
       },
     },
   },
-  { "folke/neodev.nvim" },
   {
     "nvim-neotest/neotest",
     ft = { "javascript", "typescript", "typescriptreact", "lua", "python", "go", "rust" },
@@ -55,7 +53,6 @@ return {
     },
     opts = function()
       return {
-        -- your neotest config here
         adapters = {
           require "neotest-rust",
           require "neotest-jest",
@@ -93,7 +90,6 @@ return {
       },
     },
   },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   {
     "nvim-telescope/telescope.nvim",
     optional = true,
