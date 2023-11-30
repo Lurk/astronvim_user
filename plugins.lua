@@ -8,6 +8,10 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   {
+    "rcarriga/nvim-notify",
+    opts = { stages = "static" },
+  },
+  {
     "indent-blankline.nvim",
     opts = {
       indent = { char = "·" },
