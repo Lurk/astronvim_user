@@ -18,4 +18,3 @@ git clone https://github.com/Lurk/astronvim_user.git user
 
 - `U` undo
 
-
