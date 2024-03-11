@@ -16,5 +16,9 @@ git clone https://github.com/Lurk/astronvim_user.git user
 
 ## various custom mapping
 
+### Normal mode
+
 - `U` undo
+- `<leader>tr` run current test
+- `<leader>fg` fuzzy search in git modified files
 
