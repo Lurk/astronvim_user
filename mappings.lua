@@ -1,6 +1,5 @@
 return {
   n = {
-    s = "",
     U = ":redo<CR>",
     ["<leader>tr"] = {
       function() require("neotest").run.run { suite = false, vim.fn.expand "%" } end,
